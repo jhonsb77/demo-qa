@@ -1,0 +1,7 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Como usuario del portal demoqa","Extraer la informacion e ingresarla al reporte","SUCCESS","2023-10-22T19:10:25.6280494-05:00[America/Bogota]","0.0","99.51"
+"Como usuario del portal demoqa","Ingresar la informacion en el modulo Practice Form","SUCCESS","2023-10-22T19:12:05.1693862-05:00[America/Bogota]","0.0","120.51"
+"Como usuario del portal demoqa","Eliminar la cuenta","SUCCESS","2023-10-22T19:33:19.7299045-05:00[America/Bogota]","0.0","54.12"
+"Como usuario del portal demoqa","Agregar libros a la coleccion","SUCCESS","2023-10-22T19:25:51.8392321-05:00[America/Bogota]","0.0","82.53"
+"Como usuario del portal demoqa","Eliminar libros de la coleccion","SUCCESS","2023-10-22T19:27:37.1698112-05:00[America/Bogota]","0.0","41.63"
+"Como usuario del portal demoqa","Eliminar la cuenta ""<usuario>""","SUCCESS","2023-10-22T19:29:31.9419478-05:00[America/Bogota]","0.0","51.85"

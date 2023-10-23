@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Demo QA</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="59ee448ec465d83a1780b68f30893094bfc2b2108b88cf70f0b2aa0cabffdccb.html">Como Usuario Del Portal Demoqa</a></span>
+                > <span class="truncate-60"><a
+                    href="b8fc02ae1da98a86409f720a6cd9418a5cdfaf49ba08f7f80854be8c40d2a796.html">Ingresar la informacion en el modulo Practice Form </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-10-2023 19:12</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Como Usuario Del Portal Demoqa </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                quiero acceder al modulo alerts y practice form<br />
+para extraer e ingresar informacion
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="aba62a4d183a5aef362860bca51496f4dfe46660a6f4db6c31f8faf88119ee96.html">Modulos Extraer Ingresar
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="83201f813c54c41677ffa28bd27429668bdd33ef1b18ff220d3709b8430af6c0.html">Ingresar
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Ingresar la informacion en el modulo Practice Form
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Ingreso al portal demoqa<br>When Ingreso con el usuario "&lt;usuario&gt;" "&lt;contrasena&gt;"<br>And En el modulo Practice Form, ingresar la siguiente informacion "&lt;firstName&gt;" "&lt;lastName&gt;" "&lt;email&gt;" "&lt;gender&gt;" "&lt;mobile&gt;" "&lt;birth&gt;" "&lt;subjects&gt;" "&lt;hobbies&gt;" "&lt;address&gt;" "&lt;state&gt;" "&lt;city&gt;"<br>Then Validar que se haya ingresado correctamente la informacion</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="c317fcf28e87fecc1078f5647b32b8ad439e24d402116a0d2471ed64460439a7.png" title=" 1: Ingresar la informacion en el modulo Practice Form ({usuario=test02, contrasena=Test2023*, firstName=Prueba01, lastName=Prueba01, email=prueba@yopmail.com, gender=Female, mobile=3004441234, birth=27 September 2000, subjects=Commerce, hobbies=Music, address=Autopista Norte al oriente, state=NCR, city=Delhi})" width="1366"/>
+                <img src="c317fcf28e87fecc1078f5647b32b8ad439e24d402116a0d2471ed64460439a7.png" title=" Given Ingreso al portal demoqa" width="1366"/>
+                <img src="c317fcf28e87fecc1078f5647b32b8ad439e24d402116a0d2471ed64460439a7.png" title=" When Ingreso con el usuario &quot;test02&quot; &quot;Test2023*&quot;" width="1366"/>
+                <img src="3d8e5c74e09bb048af03f1b098308728954188bf394cf059fbf26fd181f76f03.png" title=" When Ingreso con el usuario &quot;test02&quot; &quot;Test2023*&quot;" width="1366"/>
+                <img src="40d82dd2693cdd812c2b99cc31a7c7773a51bc2d4f0a6ca152b3c37f564b63f3.png" title=" When Ingreso con el usuario &quot;test02&quot; &quot;Test2023*&quot; (completed)" width="1366"/>
+                <img src="40d82dd2693cdd812c2b99cc31a7c7773a51bc2d4f0a6ca152b3c37f564b63f3.png" title=" And En el modulo Practice Form, ingresar la siguiente informacion &quot;Prueba01&quot; &quot;Prueba01&quot; &quot;prueba@yopmail.com&quot; &quot;Female&quot; &quot;3004441234&quot; &quot;27 September 2000&quot; &quot;Commerce&quot; &quot;Music&quot; &quot;Autopista Norte al oriente&quot; &quot;NCR&quot; &quot;Delhi&quot;" width="1366"/>
+                <img src="13061357274294d5fa1d60363c0699efe633349cb07056d7225d30b78a569b41.png" title=" And En el modulo Practice Form, ingresar la siguiente informacion &quot;Prueba01&quot; &quot;Prueba01&quot; &quot;prueba@yopmail.com&quot; &quot;Female&quot; &quot;3004441234&quot; &quot;27 September 2000&quot; &quot;Commerce&quot; &quot;Music&quot; &quot;Autopista Norte al oriente&quot; &quot;NCR&quot; &quot;Delhi&quot;" width="1366"/>
+                <img src="0c02b1ec3b1562ca7c525c6ac3c1e9d582533e469a9a5faa47bdaf1655b62a04.png" title=" And En el modulo Practice Form, ingresar la siguiente informacion &quot;Prueba01&quot; &quot;Prueba01&quot; &quot;prueba@yopmail.com&quot; &quot;Female&quot; &quot;3004441234&quot; &quot;27 September 2000&quot; &quot;Commerce&quot; &quot;Music&quot; &quot;Autopista Norte al oriente&quot; &quot;NCR&quot; &quot;Delhi&quot;" width="1366"/>
+                <img src="f21c3c9fa9f8868f8926f531038ffcad25778b9568c9ede15bfdbffa3f2f9805.png" title=" And En el modulo Practice Form, ingresar la siguiente informacion &quot;Prueba01&quot; &quot;Prueba01&quot; &quot;prueba@yopmail.com&quot; &quot;Female&quot; &quot;3004441234&quot; &quot;27 September 2000&quot; &quot;Commerce&quot; &quot;Music&quot; &quot;Autopista Norte al oriente&quot; &quot;NCR&quot; &quot;Delhi&quot;" width="1366"/>
+                <img src="46e8416b36e078562cbaab28688295d82873d4e1be1fce9863026f325466e632.png" title=" And En el modulo Practice Form, ingresar la siguiente informacion &quot;Prueba01&quot; &quot;Prueba01&quot; &quot;prueba@yopmail.com&quot; &quot;Female&quot; &quot;3004441234&quot; &quot;27 September 2000&quot; &quot;Commerce&quot; &quot;Music&quot; &quot;Autopista Norte al oriente&quot; &quot;NCR&quot; &quot;Delhi&quot;" width="1366"/>
+                <img src="cbe0dc455c17d02829775ea482e989ca9538dde3540589b223778bd7494b8afd.png" title=" And En el modulo Practice Form, ingresar la siguiente informacion &quot;Prueba01&quot; &quot;Prueba01&quot; &quot;prueba@yopmail.com&quot; &quot;Female&quot; &quot;3004441234&quot; &quot;27 September 2000&quot; &quot;Commerce&quot; &quot;Music&quot; &quot;Autopista Norte al oriente&quot; &quot;NCR&quot; &quot;Delhi&quot;" width="1366"/>
+                <img src="b631e8e6c250b4db8f4f6b814c69d3207d4ea26dc310a206621172d84bceebaf.png" title=" And En el modulo Practice Form, ingresar la siguiente informacion &quot;Prueba01&quot; &quot;Prueba01&quot; &quot;prueba@yopmail.com&quot; &quot;Female&quot; &quot;3004441234&quot; &quot;27 September 2000&quot; &quot;Commerce&quot; &quot;Music&quot; &quot;Autopista Norte al oriente&quot; &quot;NCR&quot; &quot;Delhi&quot;" width="1366"/>
+                <img src="21c3c2bb0d625165270a94b25c219ae624866223cfb50460d2ba8cd438bcb96c.png" title=" And En el modulo Practice Form, ingresar la siguiente informacion &quot;Prueba01&quot; &quot;Prueba01&quot; &quot;prueba@yopmail.com&quot; &quot;Female&quot; &quot;3004441234&quot; &quot;27 September 2000&quot; &quot;Commerce&quot; &quot;Music&quot; &quot;Autopista Norte al oriente&quot; &quot;NCR&quot; &quot;Delhi&quot;" width="1366"/>
+                <img src="c96f1db90a0886aafbb16f75de168d14ab53a4dc245edc2ce1075fc50f1d9ad5.png" title=" And En el modulo Practice Form, ingresar la siguiente informacion &quot;Prueba01&quot; &quot;Prueba01&quot; &quot;prueba@yopmail.com&quot; &quot;Female&quot; &quot;3004441234&quot; &quot;27 September 2000&quot; &quot;Commerce&quot; &quot;Music&quot; &quot;Autopista Norte al oriente&quot; &quot;NCR&quot; &quot;Delhi&quot;" width="1366"/>
+                <img src="53d9760f9208e6473787f37d2cc579ff63958dc69466a3753162cd9aa34a2056.png" title=" And En el modulo Practice Form, ingresar la siguiente informacion &quot;Prueba01&quot; &quot;Prueba01&quot; &quot;prueba@yopmail.com&quot; &quot;Female&quot; &quot;3004441234&quot; &quot;27 September 2000&quot; &quot;Commerce&quot; &quot;Music&quot; &quot;Autopista Norte al oriente&quot; &quot;NCR&quot; &quot;Delhi&quot; (completed)" width="1366"/>
+                <img src="53d9760f9208e6473787f37d2cc579ff63958dc69466a3753162cd9aa34a2056.png" title=" Then Validar que se haya ingresado correctamente la informacion" width="1366"/>
+                <img src="e9ceadbaa2a61a6034626d5c56655be4010ce54050bae4a915be419cd3b498c0.png" title=" Then Validar que se haya ingresado correctamente la informacion (completed)" width="1366"/>
+                <img src="e9ceadbaa2a61a6034626d5c56655be4010ce54050bae4a915be419cd3b498c0.png" title=" 1: Ingresar la informacion en el modulo Practice Form ({usuario=test02, contrasena=Test2023*, firstName=Prueba01, lastName=Prueba01, email=prueba@yopmail.com, gender=Female, mobile=3004441234, birth=27 September 2000, subjects=Commerce, hobbies=Music, address=Autopista Norte al oriente, state=NCR, city=Delhi}) (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.1.15</span>
+</div>
+</body>
+</html>

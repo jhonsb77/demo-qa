@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Como usuario del portal demoqa","Extraer la informacion e ingresarla al reporte","SUCCESS","2023-10-22T19:10:25.6280494-05:00[America/Bogota]","0.0","99.51"
+"Como usuario del portal demoqa","Ingresar la informacion en el modulo Practice Form","SUCCESS","2023-10-22T19:12:05.1693862-05:00[America/Bogota]","0.0","120.51"
+"Como usuario del portal demoqa","Eliminar la cuenta","SUCCESS","2023-10-22T19:33:19.7299045-05:00[America/Bogota]","0.0","54.12"
