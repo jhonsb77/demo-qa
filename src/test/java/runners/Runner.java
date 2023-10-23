@@ -13,5 +13,5 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
         snippets = CAMELCASE,
         tags = "@eliminarCuenta2")
 
-public class BookStoreRunner {
+public class Runner {
 }
